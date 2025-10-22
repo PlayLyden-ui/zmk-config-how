@@ -1,0 +1,59 @@
+#include <dt-bindings/gpio/gpio.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    compatible = "zmk,keyboard";
+
+    /* Define the GPIO pins for your macros */
+    pins {
+        pin0: pin0 { gpios = <&gpio0 20 GPIO_ACTIVE_LOW>; };
+        pin1: pin1 { gpios = <&gpio0 21 GPIO_ACTIVE_LOW>; };
+        pin2: pin2 { gpios = <&gpio0 22 GPIO_ACTIVE_LOW>; };
+        pin3: pin3 { gpios = <&gpio0 23 GPIO_ACTIVE_LOW>; };
+        pin4: pin4 { gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; };
+        pin5: pin5 { gpios = <&gpio0 25 GPIO_ACTIVE_LOW>; };
+        pin6: pin6 { gpios = <&gpio0 26 GPIO_ACTIVE_LOW>; };
+        pin7: pin7 { gpios = <&gpio0 27 GPIO_ACTIVE_LOW>; };
+        pin8: pin8 { gpios = <&gpio0 28 GPIO_ACTIVE_LOW>; };
+        pin9: pin9 { gpios = <&gpio0 29 GPIO_ACTIVE_LOW>; };
+        pin10: pin10 { gpios = <&gpio1 0 GPIO_ACTIVE_LOW>; };
+        pin14: pin14 { gpios = <&gpio1 4 GPIO_ACTIVE_LOW>; };
+        pin15: pin15 { gpios = <&gpio1 5 GPIO_ACTIVE_LOW>; };
+        pin16: pin16 { gpios = <&gpio1 6 GPIO_ACTIVE_LOW>; };
+        pin18: pin18 { gpios = <&gpio1 8 GPIO_ACTIVE_LOW>; };
+        pin19: pin19 { gpios = <&gpio1 9 GPIO_ACTIVE_LOW>; };
+        pin20: pin20 { gpios = <&gpio2 0 GPIO_ACTIVE_LOW>; };
+        pin21: pin21 { gpios = <&gpio2 1 GPIO_ACTIVE_LOW>; };
+    };
+
+    /* Include your macro definitions */
+    #include "macros.dtsi"
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &pin0
+                &pin1
+                &pin2
+                &pin3
+                &pin4
+                &pin5
+                &pin6
+                &pin7
+                &pin8
+                &pin9
+                &pin10
+                &pin14
+                &pin15
+                &pin16
+                &pin18
+                &pin19
+                &pin20
+                &pin21
+            >;
+        };
+    };
+};
