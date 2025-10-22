@@ -1,1 +1,12 @@
 
+// boards/shields/tester_pro_micro/tester_pro_micro.overlay
+/ {
+    aliases {
+        shield = &shield_node;
+    };
+
+    shield_node: shield {
+        compatible = "zmk,shield";
+        label = "Tester Pro Micro";
+    };
+};
