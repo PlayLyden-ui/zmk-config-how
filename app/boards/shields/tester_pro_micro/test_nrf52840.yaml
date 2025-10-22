@@ -1,0 +1,6 @@
+# boards/shields/tester_pro_micro/tester_pro_micro.yaml
+name: tester_pro_micro      # MUST match folder name exactly
+vendor: custom              # Can be anything
+description: Test shield for NRF52840
+build:
+  board: nice_nano_v2       # Must be a valid base board
