@@ -1,0 +1,5 @@
+name: test_nrf52840
+vendor: custom
+description: Single-key test board with multiple macros on NRF52840
+build:
+  board: test_nrf52840
